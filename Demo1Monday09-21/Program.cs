@@ -9,8 +9,11 @@ namespace Demo1Monday09_21
             Console.WriteLine("Vad heter du");
             string namn = Console.ReadLine() ?? "";
 
-            bool resultat = LieDetector();
-            if (resultat)
+            //Skapa ett objekt av klassen LieDetector
+            LieDetector detector = new LieDetector();
+            bool resultat = detector.CheckLie();
+            
+            if (resultat == true)
             {
                 Console.WriteLine("Du talar sanning");
             }
@@ -19,12 +22,12 @@ namespace Demo1Monday09_21
                 Console.WriteLine("Du ljuger");
             }
         }
-        static bool LieDetector()
-        {
-            Random random = new Random();
-            int resultat = random.Next(0, 2);
+        //static bool LieDetector()
+        //{
+        //    Random random = new Random();
+        //    int resultat = random.Next(0, 2);
 
-            return resultat == 1;
-        }
+        //    return resultat == 1;
+        //}
     }
 }
