@@ -16,7 +16,7 @@ namespace Demo1Monday09_21
             }
             else
             {
-                Console.WriteLine("Du ljuger");
+                Console.WriteLine("Du ljuger ganska mycket");
             }
         }
         static bool LieDetector()
